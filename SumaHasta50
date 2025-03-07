@@ -1,0 +1,18 @@
+public class Ejercicio6_8 {
+        public static void main(String[] args) {
+            int[] numeros = new int[50];
+            int suma = 0;
+
+            // llena el arreglo con numeros del 1 al 50
+            for (int i = 0; i < 50; i++) {
+                numeros[i] = i + 1;
+            }
+
+            // calcula la suma
+            for (int num : numeros) {
+                suma += num;
+            }
+
+            System.out.println("La suma de los numeros es " + suma);
+        }
+    }
