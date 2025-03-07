@@ -1,1 +1,22 @@
 
+import java.util.Scanner;
+import java.util.Locale;
+public class IvaExcersice {
+    public class CalculadoraIVA {
+        private static final double IVA_PERCENTAGE = 0.21; // 21% de IVA
+
+        public static void main(String[] args) {
+            Scanner scanner = new Scanner(System.in);
+
+            System.out.print("Introduce el precio del producto : ");
+            double precioBase = scanner.nextDouble();
+
+            double precioFinal = precioBase * (1 + IVA_PERCENTAGE);
+
+            System.out.printf("El precio final con IVA (21%%) es: %.2f", precioFinal);
+
+            scanner.close();
+        }
+    }
+}
+
