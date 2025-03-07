@@ -1,16 +1,16 @@
 import java.util.Scanner;
 public class DiaDSemana {
     public static void main(String[] args) {
-        String[] dias = {"Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"};
+        String[] dias = {"Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado", "Domingo"};
 
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Escribe un número del 1 al 7: ");
+        System.out.print("Ingresa un numero del 1 al 7: ");
         int numero = scanner.nextInt();
 
         if (numero >= 1 && numero <= 7) {
-            System.out.println("Día: " + dias[numero - 1]); // Restamos 1 para ajustar al índice del array
+            System.out.println("Daa: " + dias[numero - 1]); // Restamos 1 para ajustar al indice del array
         } else {
-            System.out.println("Número incorrecto. Debe ser entre 1 y 7.");
+            System.out.println("Numero no valido");
         }
 
         scanner.close();
