@@ -1,0 +1,24 @@
+import java.util.Scanner;
+public class DiaLaboral {
+        public static void main(String[] args) {
+            Scanner scanner = new Scanner(System.in);
+            System.out.print("Introduce un dia de la semana: ");
+            String dia = scanner.nextLine().trim().toLowerCase();
+            switch (dia) {
+                case "lunes":
+                case "martes":
+                case "miercoles":
+                case "jueves":
+                case "viernes":
+                    System.out.println("Es un dia laboral");
+                    break;
+                case "sabado":
+                case "domingo":
+                    System.out.println("No es un dia laboral");
+                    break;
+
+                default:
+                    System.out.println("No es un dia valido");
+            }
+        }
+    }
