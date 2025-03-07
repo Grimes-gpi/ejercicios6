@@ -1,0 +1,40 @@
+import java.util.Scanner;
+public class ComprarArtefactos {
+        public static void main(String[] args) {
+            Scanner scanner = new Scanner(System.in);
+
+            // Arrays con infromacion de los articulos
+            String[] nombresArtefactos = {"Plancha", "Licuadora", "Lavadora", "Cocina"};
+            double[] precios = new double[4];
+            String nombreCliente;
+
+            // Solicita los datos al usuario
+            System.out.print("Ingrese el nombre: ");
+            nombreCliente = scanner.nextLine();
+
+            // Lee los precios de cada uno de los articulos
+            for (int i = 0; i < nombresArtefactos.length; i++) {
+                System.out.print("precio para " + nombresArtefactos[i] + ": ");
+                precios[i] = scanner.nextDouble();
+            }
+
+            // Calcula el total de cada articulo
+            double total = 0;
+            for (double precio : precios) {
+                total += precio;
+            }
+
+            double descuento = (total > 1200) ? total * 0.17 : 0;
+            double pagoTotal = total - descuento;
+
+            System.out.println("\n RESUMEN DE COMPRA ");
+            System.out.println("Cliente: " + nombreCliente);
+            System.out.println("\nArticulos comprados:");
+            for (int i = 0; i < nombresArtefactos.length; i++) {
+                System.out.printf("%-10s: $%.2f%n", nombresArtefactos[i], precios[i]);
+            }
+            System.out.printf("\ntotal : $%.2f", total);
+            System.out.printf("\ndescuento:   $%.2f", descuento);
+            System.out.printf("\npago en total:  $%.2f", pagoTotal);
+        }
+    }
